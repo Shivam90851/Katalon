@@ -46,19 +46,19 @@ public class TestFillForm extends DriverInit {
 		home.home();
 		loginPage.FillForm();
 		fillform.Form1();
-		
+
 		String Expected = driver.findElement(By.xpath("//*[@class='col-xs-12 text-center']/h2")).getText();
 		System.out.println(Expected);
 		String Actual = new String("Appointment Confirmation");
 		System.out.println(Actual);
-	
+
 		asert.AssertValue(Expected, Actual);
 
 	}
 
-//	@AfterClass
-//	public void close() {
-//		driver.quit();
-//	}
+	@AfterClass
+	public void close() {
+		driver.quit();
+	}
 
 }
